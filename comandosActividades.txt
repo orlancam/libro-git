@@ -1,0 +1,101 @@
+"#Comandos de actividad 1"
+# EJERCICIO 1
+>git config --global user.name "Tu Nombre"
+
+>git config --global user.email "tu@email.com"
+
+>git config --global color.ui auto
+
+>git config --list
+
+# EJERCICIO 2
+>git init libro
+
+>cd libro
+
+>dir
+
+# EJERCICIO 3
+>git status
+
+>echo "Capítulo 1: Introducción a Git" > indice.txt
+>echo "Capítulo 2: Flujo de trabajo básico" >> indice.txt
+>echo "Capítulo 3: Repositorios remotos" >> indice.txt
+
+>git status
+
+>git add indice.txt
+
+>git status
+
+# EJERCICIO 4
+>git commit -m "Añadido índice del libro"
+
+>git status
+
+# EJERCICIO 5
+>echo "Capítulo 1: Introducción a Git" > indice.txt
+>echo "Capítulo 2: Flujo de trabajo básico" >> indice.txt
+>echo "Capítulo 3: Gestión de ramas" >> indice.txt
+>echo "Capítulo 4: Repositorios remotos" >> indice.txt
+
+>git diff
+
+>git commit -m "Añadido capítulo 3 sobre gestión de ramas"
+
+
+
+# EJERCICIO 6
+>git log -p -1
+
+>git commit --amend -m "Añadido capítulo 3 sobre gestión de ramas al índice."
+
+>git log -p -1
+
+
+
+
+
+
+
+"# Comandos actividad 2"
+# EJERCICIO 1
+>git log
+	
+	
+>mkdir capitulos
+>echo "Git es un sistema de control de versiones ideado por Linus Torvalds." > >capitulos/capitulo1.txt
+	
+>git add capitulos/capitulo1.txt
+	
+>git commit -m "Añadido capítulo 1."
+	
+>git log
+	
+# EJERCICIO 2
+>echo "El flujo de trabajo básico con Git consiste en: 1- Hacer cambios en el repositorio. 2- Añadir los cambios a la zona de intercambio temporal. 3- Hacer un commit de los cambios." > capitulo2.txt
+	
+	
+>git add capitulo2.txt
+	
+>git commit -m "Añadido capítulo 2."
+	
+>git diff HEAD HEAD~2
+	
+# EJERCICIO 3
+>echo "Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas." > capitulo3.txt
+	
+>git add capitulo3.txt
+	
+>git commit -m "Añadido capítulo 3."
+	
+>git diff faea96e HEAD
+	
+# EJERCICIO 4
+>echo "Capítulo 5: Conceptos avanzados" >> indice.txt
+	
+>git add indice.txt
+	
+>git commit -m "Añadido capítulo 5 al índice."
+	
+>git blame indice.txt
