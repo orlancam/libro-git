@@ -99,3 +99,118 @@
 >git commit -m "Añadido capítulo 5 al índice."
 	
 >git blame indice.txt
+
+#Comandos actividad 3
+#ejrcicio 1
+>git branch bibliografia
+
+#ejercicio 2
+>echo "texto del capitulo 4" > capitulos/ca
+pitulo4.txt
+>git add .
+>git commit -m "añadido capitulo 4."
+>git log --all --graph --oneline --decorate
+
+#ejercicio 3
+>git checkout bibliografia
+>echo " Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+>git add bibliografia.txt
+>git commit -m "Añadida primera referencia bibliográfica."
+>git log --all --graph --oneline --decorate
+
+#ejercicio4
+>git checkout master
+>git merge bibliografia
+>git log --all --graph --oneline –decorate
+>git branch -d bibliografia
+>git log --all --graph --oneline --decorate
+
+#ejercicio5
+>git branch bibliografia
+>git checkout bibliografia
+>echo "Scott Chacon and Ben Straub. Pro Git. Apress." > bibliografia.txt
+>echo " Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)" >> bibliografia.txt
+>git add bibliografia.txt
+>git commit -m "Añadida nueva referencia bibliográfica."
+>git checkout master
+>echo " Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+>echo " Loeliger, J. and McCullough, M. Version control with Git. O’Reilly." >> bibliografia.txt
+>echo  “Hodson, R. Ry’s Git Tutorial. Smashwords (2014) “ >>bibliografia.txt
+>git add bibliografia.txt
+>git commit -m "Añadida nueva referencia bibliográfica."
+>git merge bibliografia
+>git add bibliografia.txt
+>git commit -m "Resuelto conflicto de bibliografía."
+>git log --all --graph --oneline --decorate
+
+
+
+#COMANDOS ACTIVIDAD 4
+#ejercicio1
+>git remote add github https://github.com/orlancam/libro-git.git
+>git remote -v
+
+#ejercicio2
+>git push github master
+
+#ejercicio3
+ >git clone https://github.com/iRoot13x18/libro-git
+ >echo -e "orlancam(orlandocamaraoc@gmail.com)" >> autores.txt
+ >git add .
+ >git commit -m "Añadido nuevo autor"
+ >git push origin master
+
+#ejercicio 4
+
+ >git clone https://github.com/asalber/libro-git.git
+ >git checkout -b autoria
+ >echo -e "orlancam(orlandocamaraoc@gmail.com)" >> autores.txt
+ >git commit -am "Añadido nuevo autor."
+ >git push origin autoria
+
+#Comandos actividad 5
+
+#ejercicio 1
+>nano indice.txt (elimino la última línea y guarda los cambios.)
+>git status
+>git checkout indice.txt
+>git status
+
+
+#ejercicio 2
+
+
+>nano indice.txt (elimino la última línea y guarda los cambios.)
+>git add indice.txt
+>git status
+>git restore --staged indice.txt
+>git status
+>git checkout indice.txt
+>git status
+
+#ejercicio 3
+>nano indice.txt (elimino la última línea y guarda los cambios.)
+>rm capitulos/capitulo3.txt
+>touch capitulos/capitulo4.txt
+>git add .
+>git status
+>git restore --staged .
+>git status
+>git restore .
+>git status
+
+#ejercicio 4
+
+>nano indice.txt (elimino la última línea y guarda los cambios.)
+>rm capitulos/capitulo3.txt
+>git add .
+>git commit -m "Borrado accidental."
+>git log
+>git reset HEAD~1
+>git log
+>git status
+>git commit -c ORIG_HEAD
+>git reset --hard HEAD~1
+>git log
+>git status
+
